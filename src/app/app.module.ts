@@ -1,3 +1,4 @@
+import { reducers } from './reducers';
 import { BookSearchComponent } from './book-search.component';
 import { SearchResultsComponent } from './search-results.component';
 import { SearchComponent } from './search.component';
@@ -10,13 +11,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { MatInputModule, MatCardModule, MatToolbarModule } from '@angular/material';
 import { AppComponent } from './app.component';
+import { StoreModule } from '@ngrx/store';
+import { ResultsCountComponent } from './results-count.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookSearchComponent,
     SearchComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    ResultsCountComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot([
       { path: '', component: SearchComponent }
     ]),
+    StoreModule.provideStore(reducers),
   ],
   providers: [GoogleBooksService],
   bootstrap: [AppComponent]
