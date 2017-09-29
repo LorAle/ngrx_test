@@ -10,7 +10,7 @@ export class GoogleBooksService {
   private API_PATH = 'https://www.googleapis.com/books/v1/volumes';
 
   constructor(private http: Http) {}
-
+  // Searches for books
   searchBooks(queryTitle: string): Observable<Book[]> {
     return this.http.get(`${this.API_PATH}?q=${queryTitle}`)
       .catch(() => {
