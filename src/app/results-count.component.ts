@@ -7,9 +7,9 @@ import * as fromRoot from './reducers';
   selector: 'book-results-count',
   template:
   `
-    <md-card>
-      <md-card-title>Search Results: {{count | async}}</md-card-title>
-    </md-card>
+    <mat-card>
+      <mat-card-title>Search Results: {{count | async}}</mat-card-title>
+    </mat-card>
   `
 })
 export class ResultsCountComponent implements OnInit {
