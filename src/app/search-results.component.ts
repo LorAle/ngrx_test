@@ -29,7 +29,7 @@ import { Component, Input, OnInit } from '@angular/core';
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-    }  
+    }
   `]
 })
 export class SearchResultsComponent implements OnInit {
