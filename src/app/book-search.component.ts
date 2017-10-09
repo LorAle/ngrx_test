@@ -6,18 +6,18 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'book-book-search',
   template: `
-    <md-card>
-      <md-card-title>Find a Book</md-card-title>
-      <md-card-content>
-        <md-input-container>
-          <input mdInput placeholder="Search for a book" [formControl]="searchTerms">
-        </md-input-container>
-      </md-card-content>
-    </md-card>
+    <mat-card>
+      <mat-card-title>Find a Book</mat-card-title>
+      <mat-card-content>
+        <mat-input-container>
+          <input matInput placeholder="Search for a book" [formControl]="searchTerms">
+        </mat-input-container>
+      </mat-card-content>
+    </mat-card>
   `,
   styles: [`
-    md-card-title,
-    md-card-content {
+    mat-card-title,
+    mat-card-content {
       display: flex;
       justify-content: center;
     }

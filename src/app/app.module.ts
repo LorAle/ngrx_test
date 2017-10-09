@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { ResultsCountComponent } from './results-count.component';
 
+import 'hammerjs';
 @NgModule({
   declarations: [
     AppComponent,
