@@ -1,3 +1,4 @@
+
 import { reducers } from './reducers';
 import { BookSearchComponent } from './book-search.component';
 import { SearchResultsComponent } from './search-results.component';
@@ -13,6 +14,9 @@ import { MatInputModule, MatCardModule, MatToolbarModule } from '@angular/materi
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { ResultsCountComponent } from './results-count.component';
+import { EffectsModule } from '@ngrx/effects';
+import { BookEffects } from './book-effect';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import 'hammerjs';
 @NgModule({
@@ -33,6 +37,8 @@ import 'hammerjs';
       { path: '', component: SearchComponent }
     ]),
     StoreModule.provideStore(reducers),
+    EffectsModule.run(BookEffects),
+    StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],
   providers: [GoogleBooksService],
   bootstrap: [AppComponent]
